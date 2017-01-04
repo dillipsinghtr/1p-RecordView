@@ -2,7 +2,7 @@
 
 (function(angular){
     angular
-        .module('rv.components.RVNavigationModule', []);
+        .module('rv.components.RVMenubarModule', []);
 })(angular);
 
 

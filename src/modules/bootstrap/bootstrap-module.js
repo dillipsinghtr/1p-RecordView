@@ -9,5 +9,5 @@ angular.module('rv', [
 'rv.views.PatentRVModule',
 'rv.components.ImagesModule',
 'rv.routes.PatentModule',
-'rv.components.RVNavigationModule'
+'rv.components.RVMenubarModule'
 ]);

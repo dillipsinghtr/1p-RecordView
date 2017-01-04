@@ -1,0 +1,15 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav navbar-bottom">
+				<li class="rv-menuHead" ng-repeat="menuElm in vm.MenuBar" ng-click="menuElm.nested||vm.handleClick(menuElm.menuName)" class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{menuElm.menuName}}
+						<b ng-if="menuElm.nested == true"class="caret"></b></a>
+						<ul ng-if="menuElm.nested == true" class="dropdown-menu">
+							<li ng-repeat="sMenu in menuElm.subMenu" ng-click="vm.handleClick(sMenu.menuName)"><a href="#">{{sMenu.menuName}}</a></li>	
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>

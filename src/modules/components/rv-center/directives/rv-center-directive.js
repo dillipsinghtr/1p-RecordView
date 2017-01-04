@@ -4,26 +4,34 @@
 
   angular
   .module('rv.components.RVCenterModule')
-  .directive('rvCenter', RVCenterDirective)
-  .controller('rvCenterController', RVCenterController);
+  .directive('rvCenter', centerDirective);
 
-  function RVCenterDirective() {
+  function centerDirective() {
     return {
-      restrict: 'E',
-      templateUrl: 'modules/components/rv-center/templates/rv-center-template.html',
-      scope: {
-        title: '@'
+      restruct: 'AE',
+      scope: {},
+      bindToController: {
+        contentType: '=',
+        highlightEnabled: '=',
+        imagesEnabled: '=',
+        testValue: '='
       },
-      bindToController: true,
       controllerAs: 'vm',
-      controller: 'rvCenterController'
+      controller: centerController,
+      templateUrl: 'modules/components/rv-center/templates/rv-center-template.html'
     };
   }
 
-  RVCenterController.$inject = [];
+  centerController.$inject = ['ContentDataService'];
 
-  function RVCenterController () {
-    var vm = this;
-    vm.title = "Patent RecordView";
+  function centerController(ContentDataService) {
+    var vm = this; // jshint ignore:line
+    var results = [];
+    results.$resolved = false;
+    results.$promise = ContentDataService.get({recordNo: 'USRE46237E1'})
+    .$promise
+    .then(function (content) {
+      vm.recordData = content;
+    });
   }
 })(angular);

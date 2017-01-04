@@ -9,12 +9,8 @@
   PatentRVController.$inject = [];
 
   function PatentRVController() {
-    var vm = this;
-
-    vm.greeting = 'Welcome!!!';
-
-   
-    
+    var vm = this; // jshint ignore:line
+    vm.param = 'PAT';
   }
 
 })(angular);

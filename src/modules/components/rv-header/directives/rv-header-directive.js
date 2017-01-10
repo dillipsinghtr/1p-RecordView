@@ -26,8 +26,5 @@
     var vm = this; // jshint ignore:line
     vm.menuItems = RecordViewHeaderService.getMenuDetails();
     // vm.title = "Patent Record View";
-    console.log(vm.title);
   }
-
-  
 })(angular);

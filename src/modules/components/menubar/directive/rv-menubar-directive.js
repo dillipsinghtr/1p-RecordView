@@ -16,7 +16,8 @@
       controller: 'rvMenubarController',
       controllerAs: 'menuCtrl',
       bindToController: {
-        menuItems:'='
+        menuItems:'=',
+        callBack:'='
       },
       link: function(_scope, _elements, _attrs, _ctrl) {
         console.log(_ctrl.menuItems);
@@ -28,8 +29,9 @@
   function RVMenubarCtrl() {
     var vm = this;
     vm.menuOptions = vm.menuItems;
-    vm.handleClick = function(menuName) {
-      alert(menuName);
+    vm.handleClick = function(menuValue) {
+      //alert(menuValue);
+      vm.callBack(menuValue);
     };
   }
 })(angular);

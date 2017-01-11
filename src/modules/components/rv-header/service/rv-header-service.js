@@ -9,41 +9,37 @@
   function RecordViewHeaderService() {
 
     var menuBar = [{
-    menuName: 'Add to Work File',
-    menuUrl: null,
+    name: 'Add to Work File',
+    value: 'add-to-work-file',
     subMenu: [{
-      menuName: 'New Work File',
-      menuUrl: null,
+      name: 'New Work File',
+      value: 'new-work-file',
       subMenu: null
     }, {
-      menuName: 'Existing Work File',
-      menuUrl: null,
+      name: 'Existing Work File',
+      value: 'existing-work-file',
       subMenu: null
-    }],
-    nested: true
+    }]
   }, {
-    menuName: 'Mark Record',
-    menuUrl: null,
-    subMenu: null,
-    nested: false
+    name: 'Mark Record',
+    value: 'mark-record',
+    subMenu: null
   }, {
-    menuName: 'Watch Record',
-    menuUrl: null,
-    subMenu: null,
-    nested: false
+    name: 'Watch Record',
+    value: 'watch-record',
+    subMenu: null
   }, {
-    menuName: 'Download',
-    menuUrl: null,
+    name: 'Download',
+    value: 'download',
     subMenu: [{
-      menuName: 'Order Patent Document',
-      menuUrl: null,
+      name: 'Order Patent Document',
+      value: 'order-patent-document',
       subMenu: null
     }, {
-      menuName: 'Order File History',
-      menuUrl: null,
+      name: 'Order File History',
+      value: 'order-file-history',
       subMenu: null
-    }],
-    nested: true
+    }]
   }];
 
 

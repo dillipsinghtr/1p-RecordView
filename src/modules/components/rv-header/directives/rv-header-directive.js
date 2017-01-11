@@ -25,6 +25,9 @@
   function RVHeaderController(RecordViewHeaderService) {
     var vm = this; // jshint ignore:line
     vm.menuItems = RecordViewHeaderService.getMenuDetails();
+    vm.menuClicked = function(menuItemClicked){
+      alert(menuItemClicked);
+    }
     // vm.title = "Patent Record View";
   }
 })(angular);

@@ -1,10 +1,10 @@
 <div class="collapse navbar-collapse" id="myNavbar">
 		<ul class="nav navbar-nav navbar-bottom menubar">
-			<li class="rv-menuHead" ng-repeat="menuItem in menuCtrl.menuOptions" ng-click="menuItem.nested||menuCtrl.handleClick(menuItem.menuName)" class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{menuItem.menuName}}
-					<b ng-if="menuItem.nested == true"class="caret"></b></a>
-					<ul ng-if="menuItem.nested == true" class="dropdown-menu">
-						<li ng-repeat="subMenuItem in menuItem.subMenu" ng-click="menuCtrl.handleClick(subMenuItem.menuName)"><a href="#">{{subMenuItem.menuName}}</a></li>	
+			<li class="rv-menuHead" ng-repeat="menuItem in menuCtrl.menuOptions" ng-click="menuItem.subMenu == null && menuCtrl.handleClick(menuItem.value)" class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{menuItem.name}}
+					<b ng-if="menuItem.subMenu != null" class="caret"></b></a>
+					<ul ng-if="menuItem.subMenu != null" class="dropdown-menu">
+						<li ng-repeat="subMenuItem in menuItem.subMenu" ng-click="menuCtrl.handleClick(subMenuItem.value)"><a href="#">{{subMenuItem.name}}</a></li>	
 					</ul>
 				</li>
 			</ul>
